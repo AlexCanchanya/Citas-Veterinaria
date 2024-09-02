@@ -1,0 +1,7 @@
+/* Estilos personalizados para la fila del encabezado de la tabla */
+#mascotasTable thead th {
+    background-color: #212529; /* Fondo negro */
+    color: white; /* Texto blanco */
+  }
+  
+  

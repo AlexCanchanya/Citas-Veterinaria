@@ -1,0 +1,149 @@
+<div class="row flex-fill h-100">
+    <!-- Panel lateral -->
+    <div class="col-md-3 d-flex flex-column h-100">
+      <div class="card profile-card h-100 d-flex flex-column p-3 shadow-lg">
+        <div class="card-body flex-grow-0">
+          <!-- Información del usuario -->
+          <div class="d-flex align-items-center mb-3">
+            <div class="avatar bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <span class="avatar-initial">{{ inicialMascota }}</span>
+            </div>
+            <div class="user-info ms-3">
+              <h5 class="user-name mb-2">{{ mascota.nommascota }}</h5>
+              <div class="d-flex">
+                <button class="btn btn-light btn-sm me-2" (click)="editarMascota(mascota.idmascota)">
+                  <i class="fas fa-pen"></i>
+                </button>
+                <button class="btn btn-light btn-sm me-2" (click)="verDetallesCliente(mascota.cliente.idcliente)">
+                  <i class="fas fa-user"></i>
+                </button>
+                <button class="btn btn-light btn-sm" (click)="registrarCitas()">
+                  <i class="fas fa-calendar-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Información de contacto -->
+          <div class="mb-2"><i class="fas fa-user me-2"></i>{{ mascota.cliente.nomcliente }} {{ mascota.cliente.apecliente }}</div>
+          <div class="mb-2"><i class="fas fa-phone-alt me-2"></i>{{ mascota.cliente.telfcliente }}</div>
+          <div><i class="fas fa-envelope me-2"></i>{{ mascota.cliente.emailcliente }}</div>
+        </div>
+        <!-- Opciones del panel -->
+        <ul class="list-group list-group-flush mt-3">
+          
+            <li class="list-group-item cursor-pointer" (click)="mostrarDatosMascota()">
+            <i class="fas fa-info-circle me-2"></i> Datos del paciente
+          </li>
+          <li class="list-group-item cursor-pointer" (click)="mostrarHistorialClinico()">
+            <i class="fas fa-file-alt me-2"></i> Historial Citas
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <!-- Contenido principal -->
+    <div class="col-md-9 d-flex flex-column h-100 ">
+        
+        <div class="card h-100 p-4 shadow-lg">
+          <div class="card-body">
+            <div *ngIf="mostrarDatos">
+              <h2 class="card-title mb-4 text-primary">Datos de la Mascota</h2>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-clinic-medical text-muted me-2"></i>
+                    <div><strong>Veterinaria:</strong> Pet Center</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-paw text-muted me-2"></i>
+                    <div><strong>Especie:</strong> {{ mascota.espmascota }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-user text-muted me-2"></i>
+                    <div><strong>Dueño:</strong> {{ mascota.cliente.nomcliente }} {{ mascota.cliente.apecliente }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-venus-mars text-muted me-2"></i>
+                    <div><strong>Sexo:</strong> {{ mascota.sexomascota }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-weight text-muted me-2"></i>
+                    <div><strong>Peso:</strong> {{ mascota.pesomascota }}kg</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-dog text-muted me-2"></i>
+                    <div><strong>Raza:</strong> {{ mascota.razamascota }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-hourglass-half text-muted me-2"></i>
+                    <div><strong>Edad:</strong> {{ mascota.edadmascota }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-bone text-muted me-2"></i>
+                    <div><strong>Alimentación:</strong> {{ mascota.alimascota }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-calendar-alt text-muted me-2"></i>
+                    <div><strong>Fecha registro:</strong> {{ mascota.fechareg }}</div>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-check-circle text-muted me-2"></i>
+                    <div><strong>¿Está castrado?:</strong> {{ mascota.castrado }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      
+          <div *ngIf="mostrarHistorial">
+            <h2 class="card-title">Historial de Citas</h2>
+            <table class="table table-striped mt-3">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Motivo</th>
+                  <th>Servicio</th>
+                  
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let cita of cita">
+                  <td>{{ cita.fechacita }}</td>
+                  <td>{{ cita.observaciones }}</td>
+                  <td>{{ cita.servicios.nombreservicio }}</td>
+                  <td>
+                    <button class="btn btn-light btn-sm" (click)="mostrarDetalleHistorial(cita.idcita)">
+                      <i class="fas fa-file-alt"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="mostrarDetalle">
+            <h2 class="card-title">Detalles de la Cita</h2>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <div class="mb-2"><strong>Fecha:</strong> {{ detalleHistorial.fechacita }}</div>
+                <div class="mb-2"><strong>Hora:</strong> {{ detalleHistorial.horacita }}</div>
+                <div class="mb-2"><strong>Paciente:</strong> {{ detalleHistorial.mascotas.nommascota }}</div>
+                <div class="mb-2"><strong>Especie:</strong> {{ detalleHistorial.mascotas.espmascota }}</div>
+                <div class="mb-2"><strong>Dueño:</strong> {{ detalleHistorial.mascotas.cliente.nomcliente }} {{ detalleHistorial.mascotas.cliente.apecliente }}</div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-2"><strong>Motivo:</strong> {{ detalleHistorial.observaciones }}</div>
+                <div class="mb-2"><strong>Servicio:</strong> {{ detalleHistorial.servicios.nombreservicio }}</div>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

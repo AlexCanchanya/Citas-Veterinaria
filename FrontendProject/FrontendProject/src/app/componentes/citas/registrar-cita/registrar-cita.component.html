@@ -1,0 +1,96 @@
+<div class="card shadow-lg p-5">
+  <div class="container-fluid">
+    <h3 class="card-title mb-4">Nueva Cita</h3>
+    <div class="row ">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="idcliente" class="form-label">Dueño:</label>
+            <select id="idcliente" [(ngModel)]="cita.cliente.idcliente" name="idcliente"
+              [class.bg-light]="camposCargados" class="form-select">
+              <option value="0" disabled>Seleccionar Dueño</option>
+              <option *ngFor="let cliente of clientes" [value]="cliente.idcliente">
+                {{ cliente.nomcliente }} {{ cliente.apecliente }}
+              </option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="idmascota" class="form-label">Mascota:</label>
+            <select id="idmascota" [(ngModel)]="cita.mascotas.idmascota" name="idmascota"
+              [class.bg-light]="camposCargados" class="form-select">
+              <option value="0" disabled>Seleccionar paciente</option>
+              <option *ngFor="let mascota of mascotas" [value]="mascota.idmascota">{{ mascota.nommascota }}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="idveterinario" class="form-label">Veterinario:</label>
+            <select id="idveterinario" [(ngModel)]="cita.veterinario.idveterinario" name="idveterinario"
+              class="form-select">
+              <option value="0" disabled>Seleccionar veterinario</option>
+              <option *ngFor="let veterinario of veterinarios" [value]="veterinario.idveterinario">
+                {{veterinario.nomveterinario }} {{veterinario.apeveterinario }}: {{veterinario.horarioatencion }}
+              </option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="idservicio" class="form-label">Servicio:</label>
+            <select id="idservicio" [(ngModel)]="cita.servicios.idservicio" name="idservicio"
+              class="form-select">
+              <option value="0" disabled>Seleccionar motivo</option>
+              <option *ngFor="let servicio of servicios" [value]="servicio.idservicio">{{ servicio.nombreservicio }}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="idusuario" class="form-label">Usuario:</label>
+            <select id="idusuario" [(ngModel)]="cita.usuario.idusuario" name="idusuario"
+              class="form-select">
+              <option value="0" disabled>Seleccionar usuario</option>
+              <option *ngFor="let usuario of usuarios" [value]="usuario.idusuario">{{ usuario.nomusuario }} {{ usuario.apeusuario }}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="fechacita" class="form-label">Fecha:</label>
+            <input type="date" id="fechacita" [(ngModel)]="cita.fechacita" class="form-control">
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="horacita" class="form-label">Hora:</label>
+            <input type="time" id="horacita" [(ngModel)]="cita.horacita" class="form-control">
+          </div>
+        </div>
+  
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="observaciones" class="form-label">Observaciones:</label>
+            <input type="text" id="observaciones" [(ngModel)]="cita.observaciones" class="form-control">
+          </div>
+        </div>
+      </div>
+  
+      <div class="d-flex justify-content-start mt-4">
+        <button type="button" (click)="validarYRegistrarCitas()" class="btn btn-success me-2">
+          <i class="fa fa-paper-plane me-2"></i> Guardar
+        </button>
+        <button type="button" (click)="volverAtras()" class="btn btn-secondary">
+          Volver
+        </button>
+      </div>
+    </div>
+  </div>
+  

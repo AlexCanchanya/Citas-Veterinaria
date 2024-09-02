@@ -1,0 +1,41 @@
+<div class="card shadow-lg p-5">
+    <div class="container-fluid">
+        <h4 class="mb-4">Detalles de la Cita</h4>
+        <hr>
+        <br>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Fecha</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">{{ cita.fechacita }}</td>
+                </tr>
+                <tr style="background-color: #ffffff;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Hora</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">{{ cita.horacita }}</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Servicio</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">{{ cita.servicios.nombreservicio }}</td>
+                </tr>
+                <tr style="background-color: #ffffff;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Cliente</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">
+                        <a href="/clientes/detalle/{{ cita.mascotas.cliente.idcliente }}" class="btn btn-link text-decoration-none p-0">{{ cita.mascotas.cliente.nomcliente }} {{ cita.mascotas.cliente.apecliente }}</a>
+                    </td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Paciente (mascota)</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">                        
+                        <a href="/mascotas/detalles/{{ cita.mascotas.idmascota }}" class="btn btn-link text-decoration-none p-0">{{ cita.mascotas.nommascota }}</a>
+                    </td>
+                </tr>
+                <tr style="background-color: #ffffff;">
+                    <th style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">Motivo</th>
+                    <td style="padding: 8px; text-align: left; border-bottom: 1px solid #ddd;">{{ cita.observaciones }}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>

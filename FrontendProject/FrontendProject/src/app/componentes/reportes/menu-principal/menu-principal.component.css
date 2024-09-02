@@ -1,0 +1,116 @@
+
+  
+  .card {
+    
+    border-radius: 10px;
+    
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Asegura que los elementos se distribuyan a lo largo del eje horizontal */
+    padding: 15px;
+  }
+  
+  
+  
+  
+  
+  .info {
+    margin-left: 15px;
+    text-align: right;
+    /* Alinea el contenido de la info a la derecha */
+  
+  }
+  
+  .info h2 {
+    margin: 0;
+    font-size: 26px;
+  
+  }
+  
+  .info p {
+    margin: 0;
+    color: grey;
+  }
+  /*Diseño de carta CLIENTES */
+  .icon-circle {
+    background: linear-gradient(135deg, #FF6A3D, #FFCB3D);
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #FF6A3D, #FFCB3D);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+  
+  }
+  .card-footer:hover {
+    background: linear-gradient(135deg, #FF7A4D, #FFDB4D);
+  }
+  .card-footer p {
+    margin: 0;
+  }
+  .card-footer i {
+    font-size: 18px;
+  }
+  
+  
+  
+  
+  
+  /*Diseño de carta MASCOTAS */
+  .icon-mascotas {
+    background: linear-gradient(135deg, #b573c3, #e48ae3);
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .card-mascotas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #b573c3, #e48ae3);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 0 0 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+  
+  }
+  
+  .card-mascotas:hover {
+    background: linear-gradient(135deg, #9138a3, #cb60e0);
+  }
+  
+  .card-mascotas p {
+    margin: 0;
+  }
+  
+  .card-mascotas i {
+    font-size: 18px;
+  }
+  
+  
+  
+  

@@ -1,0 +1,39 @@
+<div class="card shadow-lg p-5">
+    <div class="container-fluid">
+        <h3 class="mb-4">Mascotas</h3>
+
+        <!-- Contenedor de botones con flexbox para alineación -->
+        <div class="d-flex justify-content-between mb-3">
+            <button  class="btn btn-primary" (click)="registrarMascota()">
+                <i class="fas fa-plus me-1" ></i> Nueva Mascota
+            </button>
+            <div>
+                <button class="btn btn-outline-secondary me-2"  (click)="generarPDF()">
+                    <i class="fas fa-file-pdf"></i>
+                </button>
+                <button class="btn btn-outline-secondary" (click)="exportToExcel()">
+                    <i class="fas fa-file-excel"></i>
+                </button>
+            </div>
+        </div>
+        <table id="mascotasTable" class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Dueño</th>
+                    <th>Especie</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Peso</th>
+                    <th>Sexo</th>
+                    <th>Castrado?</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

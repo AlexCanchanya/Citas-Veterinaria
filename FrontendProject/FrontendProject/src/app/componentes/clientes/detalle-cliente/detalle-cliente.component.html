@@ -1,0 +1,99 @@
+<div class=" d-flex  gap-4 w-100">
+    <div class="card shadow-lg p-4 flex-grow-1" style="flex-basis: 60%;">
+        <div class="card-body">
+            <h5 class="card-title mb-4">Datos del cliente</h5>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><i class="fas fa-user me-2"></i>{{ cliente.nomcliente }} {{ cliente.apecliente }}</p>
+                    <p><i class="fas fa-id-card me-2"></i>{{ cliente.dnicliente }}</p>
+                    <p><i class="fas fa-envelope me-2"></i>{{ cliente.emailcliente }}</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>{{ cliente.dircliente }}</p>
+                </div>
+                <div class="col-md-6">
+                    <p><i class="fas fa-phone me-2"></i>{{ cliente.telfcliente }}</p>
+                    <p><i class="fas fa-venus-mars me-2"></i>{{ cliente.sexcliente }}</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <button class="btn btn-primary" (click)="editarCliente(cliente.idcliente)">
+                    <i class="fas fa-edit"></i> Editar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-lg p-4 flex-grow-1" style="flex-basis: 40%;">
+        <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center mb-4">
+                Resumen financiero
+                <button (click)="toggleVisibility()" class="btn btn-outline-primary btn-sm">
+                    <i [ngClass]="isVisible ? 'fas fa-eye' : 'fas fa-eye-slash'"></i>
+                </button>
+            </h5>
+            <div [ngClass]="{ 'blur': !isVisible }">
+                <hr class="mb-4">
+                <div *ngIf="sumaTotal !== null; else noData" class="text-center mt-4">
+                    <div class="display-4 font-weight-bold">
+                        s/. {{ sumaTotal | number: '1.2-2' }}
+                    </div>
+                    <div class="text-secondary h5">
+                        Consumo total
+                    </div>
+                </div>
+                <ng-template #noData>
+                    <p class="mt-4 text-muted text-center">No se pudo calcular la suma total de comprobantes.</p>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="card shadow-lg p-4">
+    <div class="card-body">
+        <h5 class="card-title d-flex justify-content-between align-items-center mb-4">
+            Lista de Mascotas
+            <button (click)="registrarMascota()" class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Nueva Mascota
+            </button>
+        </h5>
+        <hr>
+        <br>
+        <div *ngFor="let mascota of mascota" class="d-flex align-items-center mb-4">
+            <!-- Primera columna: Inicial de la mascota -->
+            <div class="d-flex align-items-center me-3">
+                <div class="rounded-circle bg-primary text-white text-center" style="width: 40px; height: 40px; line-height: 40px;">
+                    {{ mascota.nommascota.charAt(0) }}
+                </div>
+            </div>
+            <!-- Segunda columna: Información de la mascota -->
+            <div class="flex-grow-1">
+                <p class="mb-0"><strong class="text-uppercase">{{ mascota.nommascota }}</strong></p>
+                <p class="mb-0">Especie: {{ mascota.espmascota }}</p>
+                <p class="mb-0">Raza: {{ mascota.razamascota }}</p>
+            </div>
+            <!-- Tercera columna: Edad, Sexo, Peso -->
+            <div class="flex-grow-1">
+                <p class="mb-0">Edad: {{ mascota.edadmascota }}</p>
+                <p class="mb-0">Sexo: {{ mascota.sexomascota }}</p>
+                <p class="mb-0">Peso: {{ mascota.pesomascota }} Kilos</p>
+            </div>
+            <!-- Cuarta columna: Alimentación, Castrado, Fecha Reg. -->
+            <div class="flex-grow-1">
+                <p class="mb-0">Alimentación: {{ mascota.alimascota }}</p>
+                <p class="mb-0">Castrado?: {{ mascota.castrado }}</p>
+                <p class="mb-0">Fecha Reg.: {{ mascota.fechareg }}</p>
+            </div>
+            <!-- Quinta columna: Botón -->
+            <div class="d-flex align-items-center">
+                <button class="btn btn-dark" (click)="verDetallesMascota(mascota.idmascota)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

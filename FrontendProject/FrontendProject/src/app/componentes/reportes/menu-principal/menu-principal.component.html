@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg">
+            <div class="card-content">
+                <div class="icon-mascotas">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <div class="info">
+                    <h2>{{ cantidadMascotas }}</h2>
+                    <p>Mascotas</p>
+                </div>
+            </div>
+            <div class="card-mascotas" (click)="irAListadoMascotas()">
+                <p>Mascotas</p>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg">
+            <div class="card-content">
+                <div class="icon-circle">
+                    <i class="fas fa-user-group"></i>
+                </div>
+                <div class="info">
+                    <h2>{{ cantidadClientes }}</h2>
+                    <p>Clientes</p>
+                </div>
+            </div>
+            <div class="card-footer" (click)="irAListadoClientes()">
+                <p>Clientes</p>
+                <i class="fas fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg p-2">
+            <h5 class="chart-title ms-4 mt-3">Citas por mes</h5>
+            <div class="card-body">
+                <canvas id="citasChart" style="height: 400px; width: 100%;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-lg p-2">
+            <h5 class="chart-title ms-4 mt-3">Pacientes por mes</h5>
+            <div class="card-body">
+                <canvas id="mascotasChart" style="height: 400px; width: 100%;"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,76 @@
+<div class="card shadow-lg p-5">
+    <div class="container-fluid">
+      <h3 class="card-title mb-4">Editar datos de la Mascota</h3>
+      <div class="row">
+        <!-- Campo de nombre -->
+        <div class="col-md-6 mb-3">
+          <label for="nommascota" class="form-label">Nombre:</label>
+          <input type="text" id="nommascota" [(ngModel)]="mascota.nommascota" class="form-control" [ngClass]="{'input-filled': mascota.nommascota}">
+        </div>
+  
+        <!-- Campo de apellido -->
+        <div class="col-md-6 mb-3">
+          <label for="espmascota" class="form-label">Especie:</label>
+          <input type="text" id="espmascota" [(ngModel)]="mascota.espmascota" class="form-control" [ngClass]="{'input-filled': mascota.espmascota}">
+        </div>
+        <!-- Campo de dirección -->
+        <div class="col-md-6 mb-3">
+          <label for="razamascota" class="form-label">Raza:</label>
+          <input type="text" id="razamascota" [(ngModel)]="mascota.razamascota" class="form-control" [ngClass]="{'input-filled': mascota.razamascota}">
+        </div>
+        <!-- Campo de DNI -->
+        <div class="col-md-6 mb-3">
+          <label for="edadmascota" class="form-label">Edad:</label>
+          <input type="text" id="edadmascota" [(ngModel)]="mascota.edadmascota" class="form-control" [ngClass]="{'input-filled': mascota.edadmascota}">
+        </div>
+  
+        <!-- Campo de sexo -->
+        <div class="col-md-6 mb-3">
+          <label for="sexomascota" class="form-label">Sexo:</label>
+          <select id="sexomascota" [(ngModel)]="mascota.sexomascota" class="form-select" [ngClass]="{'input-filled': mascota.sexomascota}">
+            <option value="">Selecciona un género</option>
+            <option value="Macho">Macho</option>
+            <option value="Hembra">Hembra</option>
+          </select>
+        </div>
+        
+        <!-- Campo de correo -->
+        <div class="col-md-6 mb-3">
+          <label for="pesomascota" class="form-label">PEso:</label>
+          <input type="email" id="pesomascota" [(ngModel)]="mascota.pesomascota" class="form-control" [ngClass]="{'input-filled': mascota.pesomascota}">
+        </div>
+        <!-- Campo de teléfono -->
+        <div class="col-md-6 mb-3">
+          <label for="alimascota" class="form-label">Alimentacion:</label>
+          <input type="text" id="alimascota" [(ngModel)]="mascota.alimascota" class="form-control" [ngClass]="{'input-filled': mascota.alimascota}">
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="castrado" class="form-label">Castrado?:</label>
+          <select id="castrado" [(ngModel)]="mascota.castrado" class="form-select" [ngClass]="{'input-filled': mascota.castrado}">
+            <option value="">Selecciona una opcion</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+  
+        <div class="col-md-6 mb-3">
+          <label for="fechareg" class="form-label">Fechareg:</label>
+          <input type="date" id="fechareg" [(ngModel)]="mascota.fechareg" class="form-control" [ngClass]="{'input-filled': mascota.fechareg}">
+        </div>
+  
+        
+        
+  
+      </div>
+      <!-- Botones de acción -->
+      <div class="d-flex justify-content-start mt-4">
+        <button type="button" (click)="actualizarMascota()" class="btn btn-success me-2">
+          <i class="fa fa-paper-plane me-2"></i> Guardar
+        </button>
+        <button type="button" (click)="volverAtras()" class="btn btn-secondary">
+          Volver
+        </button>
+      </div>
+    </div>
+  </div>

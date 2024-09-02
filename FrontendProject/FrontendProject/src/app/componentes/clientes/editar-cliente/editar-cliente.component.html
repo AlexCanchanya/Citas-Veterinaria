@@ -1,0 +1,71 @@
+<div class="card shadow-lg p-5">
+  <div class="container-fluid">
+      <h3 class="card-title mb-4">Editar datos del Cliente</h3>
+      <div class="row">
+          <!-- Campo de nombre -->
+          <div class="col-md-6 mb-3">
+              <label for="nomcliente" class="form-label">Nombre:</label>
+              <input type="text" id="nomcliente" [(ngModel)]="cliente.nomcliente" 
+                     class="form-control" 
+                     [ngClass]="{'input-filled': cliente.nomcliente}">
+          </div>
+          <!-- Campo de apellido -->
+          <div class="col-md-6 mb-3">
+              <label for="apecliente" class="form-label">Apellido:</label>
+              <input type="text" id="apecliente" [(ngModel)]="cliente.apecliente" 
+                     class="form-control" 
+                     [ngClass]="{'input-filled': cliente.apecliente}">
+          </div>
+          <!-- Campo de dirección -->
+          <div class="col-md-6 mb-3">
+              <label for="dircliente" class="form-label">Dirección:</label>
+              <input type="text" id="dircliente" [(ngModel)]="cliente.dircliente" 
+                     class="form-control" 
+                     [ngClass]="{'input-filled': cliente.dircliente}">
+          </div>
+          <!-- Campo de DNI -->
+          <div class="col-md-6 mb-3">
+              <label for="dnicliente" class="form-label">DNI:</label>
+              <input type="text" id="dnicliente" [(ngModel)]="cliente.dnicliente" 
+                     class="form-control" maxlength="8" 
+                     inputmode="numeric" pattern="[0-9]*"
+                     oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 8)" 
+                     [ngClass]="{'input-filled': cliente.dnicliente}">
+          </div>
+          <!-- Campo de correo -->
+          <div class="col-md-6 mb-3">
+              <label for="emailcliente" class="form-label">Correo:</label>
+              <input type="email" id="emailcliente" [(ngModel)]="cliente.emailcliente" 
+                     class="form-control" 
+                     [ngClass]="{'input-filled': cliente.emailcliente}">
+          </div>
+          <!-- Campo de teléfono -->
+          <div class="col-md-6 mb-3">
+              <label for="telfcliente" class="form-label">Teléfono:</label>
+              <input type="text" id="telfcliente" [(ngModel)]="cliente.telfcliente" 
+                     class="form-control" 
+                     [ngClass]="{'input-filled': cliente.telfcliente}">
+          </div>
+          <!-- Campo de sexo -->
+          <div class="col-md-6 mb-3">
+              <label for="sexcliente" class="form-label">Sexo:</label>
+              <select id="sexcliente" [(ngModel)]="cliente.sexcliente" 
+                      class="form-select" 
+                      [ngClass]="{'input-filled': cliente.sexcliente}">
+                  <option value="">Selecciona un género</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+              </select>
+          </div>
+      </div>
+      <!-- Botones de acción -->
+      <div class="d-flex justify-content-start mt-4">
+          <button type="button" (click)="actualizarCliente()" class="btn btn-success me-2">
+              <i class="fa fa-paper-plane me-2"></i> Guardar
+          </button>
+          <button type="button" (click)="volverAtras()" class="btn btn-secondary">
+              Volver
+          </button>
+      </div>
+  </div>
+</div>

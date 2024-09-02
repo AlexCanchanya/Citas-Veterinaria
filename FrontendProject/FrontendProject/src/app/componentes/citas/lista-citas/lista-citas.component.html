@@ -1,0 +1,50 @@
+<div class="card shadow-lg p-5">
+  <div class="container-fluid">
+    <h3 class="mb-4">Citas</h3>
+
+    <!-- Contenedor de botones con flexbox para alineación -->
+    <div class="d-flex justify-content-between mb-3">
+      <button class="btn btn-primary" (click)="registrarCitas()">
+        <i class="fas fa-plus me-1"></i> Nueva Cita
+      </button>
+      <div>
+        <button class="btn btn-outline-secondary me-2"  (click)="generarPDF()">
+          <i class="fas fa-file-pdf"></i>
+        </button>
+        <button class="btn btn-outline-secondary" (click)="exportToExcel()">
+          <i class="fas fa-file-excel"></i>
+        </button>
+      </div>
+    </div>
+    <table id="citasTable" class="table table-striped table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Cliente</th>
+          <th>Telefono</th>
+          <th>Servicio</th>
+          <th>Mascota</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cita of citas">
+          <td>{{ cita.idcita }}</td>
+          <td>{{ cita.cliente.nomcliente }} {{ cita.cliente.apecliente }}</td>
+          <td>{{ cita.cliente.telfcliente }}</td>
+          <td>{{ cita.servicios.nombreservicio }}</td>
+          <td>{{ cita.mascotas.nommascota }}</td>
+          <td>{{ cita.fechacita }}</td>
+          <td>{{ cita.horacita }}</td>
+          <td>           
+              {{ cita.estcita }}
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

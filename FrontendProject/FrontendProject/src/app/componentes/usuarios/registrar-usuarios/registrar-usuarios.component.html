@@ -1,0 +1,45 @@
+<div class="card shadow-lg p-5">
+    <div class="container-fluid">
+        <h3 class="card-title mb-4">Nuevo Usuario</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nomusuario" class="form-label">Nombres:</label>
+                        <input type="text" id="nomusuario" class="form-control" [(ngModel)]="usuario.nomusuario">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="apeusuario" class="form-label">Apellidos:</label>
+                        <input type="text" id="apeusuario" class="form-control" [(ngModel)]="usuario.apeusuario">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="rol" class="form-label">Rol:</label>
+                        <select id="rol" class="form-select" [(ngModel)]="usuario.rol">
+                            <option value="">Seleccione un rol</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Recepcionista">Recepcionista</option>
+                            <option value="Cajero">Cajero</option>                   
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nickusuario" class="form-label">Username:</label>
+                        <input type="text" id="nickusuario" class="form-control" [(ngModel)]="usuario.nickusuario">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="passusuario" class="form-label">Password:</label>
+                        <input type="text" id="passusuario" class="form-control" [(ngModel)]="usuario.passusuario">
+                    </div>
+                </div>
+
+                <div class="mt-4 text">
+                    <button type="button" class="btn btn-success me-2" (click)="validarYRegistrarUsuario()">
+                        <i class="fa fa-paper-plane me-2"></i> Guardar
+                    </button>
+                    <button type="button" class="btn btn-secondary" (click)="volverAtras()">
+                        Volver
+                    </button>
+                </div>
+        </div>
+</div>
