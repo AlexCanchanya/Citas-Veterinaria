@@ -18,8 +18,8 @@ Este proyecto es un sistema que permite gestionar citas en una veterinaria. Incl
 - **Módulos Gestión de Citas:** Programar, modificar y cancelar citas para mascotas.
 - **Gestión de Clientes:** Administración de la información de los dueños de las mascotas.
 - **Gestión de Mascotas:** Manejo de la información de las mascotas, incluyendo su historial médico.
-- **Notificaciones:** Envío de recordatorios y confirmaciones de citas vía correo electrónico.
-- **Dashboard:** Visualización de estadísticas y reportes sobre las citas y clientes.
+- **Notificaciones:** Envío de recordatorios y confirmaciones de citas vía whatsapp.
+- **Dashboard:** Visualización de estadísticas y reportes sobre las citas y pacientes.
 
 
 ## Instalación
