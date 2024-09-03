@@ -2,6 +2,7 @@
 
 Este proyecto es un sistema que permite gestionar citas en una veterinaria. Incluye un backend desarrollado en Java con Spring Boot y un frontend desarrollado en Angular. El sistema permite a los usuarios manejar clientes, mascotas, y gestionar citas a través de una interfaz web amigable.
 
+(https://github.com/AlexCanchanya/Citas-Veterinaria/blob/main/image.png)
 ## Modulos
 
 - **Módulos Gestión de Citas:** Programar, modificar y cancelar citas para mascotas.
