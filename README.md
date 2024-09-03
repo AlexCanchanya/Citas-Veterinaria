@@ -1,10 +1,12 @@
 # Sistema de Gestión de Citas para Veterinaria
-![Version](https://img.shields.io/badge/version-1.0.0-orange)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+![Version](https://img.shields.io/badge/version-1.0.0-orange?style=flat)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=java&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat&logo=angular&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+
 
 
 Este proyecto es un sistema que permite gestionar citas en una veterinaria. Incluye un backend desarrollado en Java con Spring Boot y un frontend desarrollado en Angular. El sistema permite a los usuarios manejar clientes, mascotas, y gestionar citas a través de una interfaz web amigable.
