@@ -10,7 +10,7 @@
 
 
 
-Este proyecto es un sistema que permite gestionar citas en una veterinaria. Incluye un backend desarrollado en Java con Spring Boot y un frontend desarrollado en Angular. El sistema permite a los usuarios manejar clientes, mascotas, y gestionar citas a través de una interfaz web amigable.
+Este proyecto es un sistema de gestión de citas para una veterinaria, desarrollado con un enfoque en arquitectura de microservicios y APIs RESTful. La aplicación cuenta con un backend construido en Java utilizando Spring Boot, que ofrece servicios a través de RESTful APIs para manejar operaciones relacionadas con clientes, mascotas y citas. El frontend está desarrollado en Angular, proporcionando una interfaz web intuitiva para interactuar con estos servicios. La arquitectura de microservicios permite una escalabilidad y mantenimiento eficiente del sistema, mientras que el uso de RESTful APIs asegura una comunicación clara y estandarizada entre el frontend y el backend.
 
 ![](https://github.com/AlexCanchanya/Citas-Veterinaria/blob/main/image.png)
 ## Modulos
