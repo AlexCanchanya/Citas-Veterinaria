@@ -36,12 +36,12 @@ Para instalar el Sistema Requieres:
 - Deberás crear la base de datos llamada "veterinary" en tu servidor MySQL. Las tablas requeridas están en el archivo schema.sql, que debes ejecutar en tu servidor MySQL para crear las tablas necesarias.
 
 **Configuración del Backend con Spring Boot:**
-- Abre el proyecto en Spring Tools Suite (STS) o en IntelliJ IDEA.
+- Abre el proyecto BackendProject en Spring Tools Suite (STS) o en IntelliJ IDEA.
 - Modifica el archivo application.properties ubicado en la carpeta src/main/resources y - agrega los datos de conexión a tu base de datos MySQL, como el nombre de usuario y la contraseña.
 - Una vez configurado, ejecuta el sistema.
 
 **Configuración del Frontend con Angular:**
-- Navega al directorio del proyecto Angular que se encuentra en la carpeta frontend.
+- Navega al directorio del proyecto Angular que se encuentra en la carpeta FrontendProject.
 - Instala las dependencias en caso de ser necesarias.
 - ejecuta el servidor de desarrollo de Angular con: ng serve
 - Finalmente, abre tu navegador web y accede a la aplicación en http://localhost:4200.
