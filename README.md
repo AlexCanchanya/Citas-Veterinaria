@@ -20,3 +20,36 @@ Este proyecto es un sistema que permite gestionar citas en una veterinaria. Incl
 - **Gestión de Mascotas:**Manejo de la información de las mascotas, incluyendo su historial médico.
 - **Notificaciones:** Envío de recordatorios y confirmaciones de citas vía correo electrónico.
 - **Dashboard:** Visualización de estadísticas y reportes sobre las citas y clientes.
+
+
+### Instalación
+
+Para instalar el Sistema Requieres:
+- JDK 11 o superior
+- Spring Tools Suite (STS) o IntelliJ IDEA
+- Node.js y npm
+- Angular CLI
+- MySQL
+
+**Descargas y configuracion de MySql:
+**
+- Primero debes descargar este repositorio y colocarlo en tu carpeta de preferencia.
+- Deberás crear la base de datos llamada "veterinary" en tu servidor MySQL. Las tablas requeridas están en el archivo schema.sql, que debes ejecutar en tu servidor MySQL para crear las tablas necesarias.
+
+**Configuración del Backend con Spring Boot:
+**
+- Abre el proyecto en Spring Tools Suite (STS) o en IntelliJ IDEA.
+- Modifica el archivo application.properties ubicado en la carpeta src/main/resources y - agrega los datos de conexión a tu base de datos MySQL, como el nombre de usuario y la contraseña.
+- Una vez configurado, ejecuta el sistema.
+
+**Configuración del Frontend con Angular:
+**
+- Navega al directorio del proyecto Angular que se encuentra en la carpeta frontend.
+- Instala las dependencias en caso de ser necesarias.
+- ejecuta el servidor de desarrollo de Angular con: ng serve
+- Finalmente, abre tu navegador web y accede a la aplicación en http://localhost:4200.
+
+**Datos de usuario por defecto:
+**
+- Usuario: admin
+- Contraseña: admin
